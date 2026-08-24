@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Kebab Co. | Menu Modern</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #fca311; /* Premium Gold/Orange */
+            --bg-color: #121212; /* Dark Mode */
+            --card-bg: #1e1e1e;
+            --text-main: #f4f4f4;
+            --text-muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(180deg, #000000 0%, var(--bg-color) 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .menu-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(252, 163, 17, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .variant-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--primary-color);
+            color: #000;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transform: rotate(45deg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+            padding-right: 20px;
+        }
+
+        .menu-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+
+        .ingredients {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .ingredient-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #ddd;
+            border: 1px solid #444;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .btn-order {
+            background-color: var(--primary-color);
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: #e5940e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #222;
+            margin-top: 40px;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Urban Kebab Co.</h1>
+        <p>Mendefinisikan ulang street food dengan bahan premium dan cita rasa global yang berani. Berani coba varian modern kami?</p>
+    </header>
+
+    <div class="container">
+        <div class="menu-grid">
+            
+            <!-- Variant 1 -->
+            <div class="menu-card">
+                <div class="variant-badge">Premium</div>
+                <h2 class="menu-title">Truffle Wagyu Melt</h2>
+                <p class="menu-desc">Potongan daging Wagyu MB5 yang meleleh di mulut, dipadukan dengan aroma truffle mewah dan keju yang lumer. Dibungkus dengan charcoal tortilla hitam yang eksotis.</p>
+                <div class="ingredients">
+                    <span class="ingredient-tag">Wagyu Beef MB5</span>
+                    <span class="ingredient-tag">Truffle Aioli</span>
+                    <span class="ingredient-tag">Caramelized Onion</span>
+                    <span class="ingredient-tag">Charcoal Wrap</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rp 85.000</span>
+                    <a href="#" class="btn-order">Pesan</a>
+                </div>
+            </div>
+
+            <!-- Variant 2 -->
+            <div class="menu-card">
+                <h2 class="menu-title">Seoul Gochujang Chicken</h2>
+                <p class="menu-desc">Perpaduan sensasi K-Pop dan Kebab! Ayam renyah berlapis saus gochujang pedas manis, diseimbangkan dengan kesegaran kimchi slaw yang autentik.</p>
+                <div class="ingredients">
+                    <span class="ingredient-tag">Crispy Chicken</span>
+                    <span class="ingredient-tag">Gochujang Glaze</span>
+                    <span class="ingredient-tag">Kimchi Slaw</span>
+                    <span class="ingredient-tag">Mozzarella</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rp 55.000</span>
+                    <a href="#" class="btn-order">Pesan</a>
+                </div>
+            </div>
+
+            <!-- Variant 3 -->
+            <div class="menu-card">
+                <h2 class="menu-title">Mediterranean Lamb & Feta</h2>
+                <p class="menu-desc">Resep klasik yang diangkat ke level modern. Daging domba panggang rempah lambat (slow-roasted), saus tzatziki segar, dan keju feta dalam balutan spinach wrap sehat.</p>
+                <div class="ingredients">
+                    <span class="ingredient-tag">Spiced Lamb</span>
+                    <span class="ingredient-tag">Feta Cheese</span>
+                    <span class="ingredient-tag">Tzatziki</span>
+                    <span class="ingredient-tag">Spinach Wrap</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rp 75.000</span>
+                    <a href="#" class="btn-order">Pesan</a>
+                </div>
+            </div>
+
+            <!-- Variant 4 -->
+            <div class="menu-card">
+                <div class="variant-badge" style="background: #4caf50;">Vegan</div>
+                <h2 class="menu-title">Beetroot Hummus Falafel</h2>
+                <p class="menu-desc">Pilihan 100% plant-based yang kaya rasa. Falafel gurih renyah dengan beetroot hummus pink yang cantik, alpukat segar, dan saus tahini.</p>
+                <div class="ingredients">
+                    <span class="ingredient-tag">Crispy Falafel</span>
+                    <span class="ingredient-tag">Beetroot Hummus</span>
+                    <span class="ingredient-tag">Avocado</span>
+                    <span class="ingredient-tag">Tahini</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rp 50.000</span>
+                    <a href="#" class="btn-order">Pesan</a>
+                </div>
+            </div>
+
+            <!-- Variant 5 -->
+            <div class="menu-card">
+                <h2 class="menu-title">Texas Brisket Mac & Cheese</h2>
+                <p class="menu-desc">Comfort food maksimal! Brisket sapi asap 12 jam ala Texas, dipadukan dengan Mac & Cheese creamy dan jalapeno pedas, dibalut dalam tortilla mentega bawang.</p>
+                <div class="ingredients">
+                    <span class="ingredient-tag">Smoked Brisket</span>
+                    <span class="ingredient-tag">Mac & Cheese</span>
+                    <span class="ingredient-tag">Jalapeno</span>
+                    <span class="ingredient-tag">Garlic Wrap</span>
+                </div>
+                <div class="card-footer">
+                    <span class="price">Rp 65.000</span>
+                    <a href="#" class="btn-order">Pesan</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Urban Kebab Co. | Cita Rasa Tanpa Batas</p>
+    </footer>
+
+</body>
+</html>
+"""
+
+file_path = "/mnt/data/Urban_Kebab_Menu.html"
+with open(file_path, "w") as f:
+    f.write(html_content)
+
+print(f"File created successfully at {file_path}")
